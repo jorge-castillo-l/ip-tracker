@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de dirección IP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <main class="tracker">
+        <div class="tracker__header">
+            <h1 class="tracker__title">Localizador de dirección IP</h1>
+            <form class="search-form">
+                <input type="text" class="search-form__input" placeholder="Busca una dirección IP o dominio" aria-label="Dirección IP o dominio">
+                <button type="submit" class="search-form__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+                </button>
+            </form>
+        </div>
+        <div class="info-panel">
+            <div class="info-panel__item">
+                <h2 class="info-panel__label">DIRECCIÓN IP</h2>
+                <p class="info-panel__value" id="ip">-</p>
+            </div>
+            <div class="info-panel__item">
+                <h2 class="info-panel__label">UBICACIÓN</h2>
+                <p class="info-panel__value" id="location">-</p>
+            </div>
+            <div class="info-panel__item">
+                <h2 class="info-panel__label">ZONA HORARIA</h2>
+                <p class="info-panel__value" id="timezone">-</p>
+            </div>
+            <div class="info-panel__item">
+                <h2 class="info-panel__label">ISP</h2>
+                <p class="info-panel__value" id="isp">-</p>
+            </div>
+        </div>
+        <div id="map" class="map"></div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
